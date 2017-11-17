@@ -1,0 +1,28 @@
+body{
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+#slider{
+	overflow: hidden;
+	border: 1px black solid;
+	width: 640px;
+	height: 480px;
+	background: grey;
+	z-index: -420;
+}
+
+#slider > *{
+	position: absolute;
+}
+
+.mock-img{
+  width: 640px;
+  height: 480px;
+  border: 1px black solid;
+	
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}

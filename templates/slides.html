@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="static/styles.css">
+	</head>
+	<body>
+		<h1>Media Slide Show</h1>
+		<div id="slider">
+			{% for img in images %}
+			<img src="{{img}}" width="{{slider_width}}" height="{{slider_height}}">
+			{% endfor %}
+		</div>
+	</body>
+	<script src="static/cycle.js"></script>
+</html>
