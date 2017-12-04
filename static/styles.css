@@ -1,3 +1,8 @@
+:root{
+	--slide_width: 640px;
+	--slide_height: 480px;
+}
+
 body{
 	display: grid;
 	align-items: center;
@@ -5,10 +10,12 @@ body{
 }
 
 #slider{
+	position: relative;
 	overflow: hidden;
-	border: 1px black solid;
-	width: 640px;
-	height: 480px;
+	overflow-x: hidden;
+	border: 2px black solid;
+	width: var(--slide_width);
+	height: var(--slide_height);
 	background: grey;
 	z-index: -420;
 }
@@ -18,11 +25,27 @@ body{
 }
 
 .mock-img{
-  width: 640px;
-  height: 480px;
-  border: 1px black solid;
-	
+  width: var(--slide_width);
+  height: var(--slide_height);
   display: grid;
   align-items: center;
   justify-items: center;
+}
+
+.animated{
+	animation-delay: 5s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-name: cycleOne;
+}
+@keyframes cycleOne{
+	0%{
+		z-index: 100;
+	}
+	90%{
+		transform: translate(calc(var(--slide_width)*1.1));
+	}
+	100%{
+		z-index: 0;
+	}
 }
