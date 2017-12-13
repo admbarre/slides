@@ -1,6 +1,8 @@
 :root{
 	--slide_width: 640px;
 	--slide_height: 480px;
+	--delay: 5s;
+	--duration: 2s;
 }
 
 body{
@@ -33,19 +35,12 @@ body{
 }
 
 .animated{
-	animation-delay: 5s;
-	animation-duration: 2s;
-	animation-fill-mode: forwards;
+	animation-delay: var(--delay);
+	animation-duration: var(--duration);
 	animation-name: cycleOne;
 }
 @keyframes cycleOne{
-	0%{
-		z-index: 100;
-	}
-	90%{
-		transform: translate(calc(var(--slide_width)*1.1));
-	}
 	100%{
-		z-index: 0;
+		transform: translate(calc(var(--slide_width)*1.1));
 	}
 }
